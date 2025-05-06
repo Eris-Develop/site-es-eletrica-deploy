@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Es Elétrica RJ - Soluções Inteligentes</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style2.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="./img/logo.png" alt="Es Elétrica RJ"> </div>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <nav id="menu">
+      <a href="#home">Home</a>
+      <a href="#energia">Energia Solar</a>
+      <a href="#seguranca">Segurança Eletrônica</a>
+      <a href="#eletrica">Instalações Elétricas</a>
+      <a href="#automacao">Automação Residencial</a>
+      <a href="#simulador">Simulador Solar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="./img/pagamento.png" alt="Energia Solar">
+      <img src="./img/hibrido.png" alt="Segurança Eletrônica">
+      <img src="./img/solis.png" alt="Eletrica">
+    </div>
+  </div>
+
+  <main>
+   
+
+    <section id="home">
+      <h2 class="section-title">Bem-vindo à Es Elétrica RJ</h2>
+      <p>Com anos de experiência, oferecemos soluções completas em energia solar, segurança eletrônica, instalações elétricas e automação residencial. Qualidade, inovação e atendimento personalizado fazem parte da nossa essência.</p>
+      <a href="https://wa.me/5521998415889" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+      </a>
+    </section>
+
+    <section id="energia" class="grid">
+      <div>
+        <h2 class="section-title">Energia Solar</h2>
+        <p>Com a energia solar, você pode economizar até 95% na sua conta de luz. Nossos projetos são personalizados de acordo com seu consumo e tipo de telhado. A Es Elétrica RJ oferece instalação rápida, materiais de alta performance e suporte completo pós-venda.</p>
+        <p>Instalar um sistema fotovoltaico contribui para o meio ambiente e valoriza seu imóvel. Atendemos clientes residenciais, comerciais e industriais com excelência.<a style="background: var(--azul);text-decoration:none ; " href="https://wa.me/5521998415889" > Saiba mais...</a></p>
+      </div>
+      <img src="./img/Solar2.jpg" alt="Sistema solar">
+    </section>
+
+    <section id="seguranca" class="grid">
+      <div>
+        <h2 class="section-title">Segurança Eletrônica</h2>
+        <p>Proteja o que mais importa com nossas soluções de segurança. Oferecemos instalação de CFTV, alarmes, controle de acesso, sensores de presença e muito mais.</p>
+        <p>A Es Elétrica RJ trabalha com as melhores marcas e realiza projetos de segurança sob medida, garantindo monitoramento eficaz e tranquilidade 24 horas por dia.<a style="background: var(--azul);text-decoration:none ; " href="https://wa.me/5521998415889" > Saiba mais...</a></p>
+      </div>
+      <img src="./img/Cftv.jpg" alt="Câmera de segurança">
+    </section>
+
+    <section id="eletrica" class="grid">
+      <div>
+        <h2 class="section-title">Instalações Elétricas</h2>
+        <p>Desde pequenos reparos até grandes projetos, realizamos instalações elétricas com foco em segurança e eficiência. Atuamos em obras residenciais, comerciais e industriais.</p>
+        <p>Garantimos o uso de materiais certificados, mão de obra qualificada e total conformidade com as normas técnicas vigentes (NBR 5410).<a style="background: var(--azul);text-decoration:none ; " href="https://wa.me/5521998415889" > Saiba mais...</a></p>
+      </div>
+      <img src="./img/Eletrica2.jpg" alt="Instalação elétrica">
+    </section>
+
+    <section id="automacao" class="grid">
+      <div>
+        <h2 class="section-title">Automação Residencial</h2>
+        <p>Controle sua casa de onde estiver! Oferecemos soluções em automação de iluminação, climatização, áudio, vídeo, cortinas e segurança integradas em um único sistema.</p>
+        <p>A Es Elétrica RJ transforma sua residência em um ambiente mais inteligente, confortável e econômico. <a style="background: var(--azul);text-decoration:none ; " href="https://wa.me/5521998415889" > Saiba mais...</a></p>
+       
+      </div>
+      
+      <img src="./img/automação2-2.jpg" alt="Casa inteligente">
+    </section>
+
+    <!--Calculadora solar-->
+    <div class="simulacao">
+      <h2>Simulação em tempo real gratuita</h2>
+      <form id="solarForm">
+        <div class="form2">
+        <div class="formdados">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" id="sobrenome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" required />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" required />
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" required />
+        </div>
+       </div>
+        <div class="formnomes">
+        <div class="full-width">
+          <label for="telhado">Tipo de telhado:</label>
+          <select id="telhado" required>
+            <option value="">Selecione</option>
+            <option value="ceramica">Cerâmica</option>
+            <option value="fibrocimento">Fibrocimento</option>
+            <option value="metalico">Metálico</option>
+            <option value="laje">Laje</option>
+          </select>
+        </div>
+
+        <div class="full-width">
+          <label for="concessionaria">Concessionária de Energia:</label>
+          <select id="concessionaria" required>
+            <option value="">Selecione</option>
+            <option value="0.97">Enel</option>
+            <option value="0.844">Light</option>
+            <option value="0.95">Neoenergia</option>
+            <option value="0.93">Copel</option>
+            <option value="0.89">Energisa</option>
+            <option value="0.91">Celesc</option>
+            <option value="0.92">RGE</option>
+            <option value="0.88">Cemig</option>
+          </select>
+        </div>
+        
+
+        <div class="full-width">
+          <label for="quando">Quando pretende instalar a usina?</label>
+          <input type="date" id="quando" required />
+        </div>
+        <div class="full-width">
+          <label for="conta">Valor médio da conta de luz (R$):</label>
+          <input type="number" id="conta" required />
+        </div>
+      </div>
+    </div>
+      <div class="formbutton">
+        <div class="full-width">
+          <button class="button" id="calcular" type="submit">Calcular</button>
+        </div>
+      </div>
+      </form>
+              
+      <div class="share-print" id="botoesAcao">
+        <!-- <button class="button" onclick="imprimirResultado()"><i class="fas fa-print"></i> Imprimir Resultado</button>-->
+        <button class="button" onclick="compartilhar()"><i class="fas fa-share-alt"></i> Compartilhar</button>
+        <button class="button" ><a style="color: aliceblue;text-decoration: none;list-style: none; " href="https://wa.me/5521998415889" ><i class=""></i> Falar com um Consultor</a> </button>
+      </div>
+    </div>
+    
+    <script>
+      /*
+       function imprimirResultado() {
+        window.print();
+          }
+        */
+      
+        
+  async function imprimirResultado() {
+    const printArea = document.getElementById('printArea');
+
+    if (!printArea) {
+      alert('Nenhum resultado disponível para impressão.');
+      return;
+    }
+
+    const htmlContent = printArea.innerHTML;
+
+    try {
+      const response = await fetch('/gerar-pdf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ html: htmlContent })
+      });
+
+      const result = await response.json();
+      alert(result.message || 'PDF gerado e enviado com sucesso!');
+    } catch (err) {
+      alert('Erro ao gerar ou enviar PDF: ' + err.message);
+    }
+  }
+
+  
+
+      function compartilhar() {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Simule sua usina solar com a Es Elétrica RJ!',
+            text: 'Calcule sua economia e comece a gerar sua própria energia.',
+            url: window.location.href
+          });
+        } else {
+          alert('Compartilhamento não suportado neste navegador. Copie o link: ' + window.location.href);
+        }
+      }
+    
+document.getElementById('solarForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const conta = parseFloat(document.getElementById('conta').value);
+  const tarifa = parseFloat(document.getElementById('concessionaria').value);
+  const select = document.getElementById("concessionaria");
+  const resultconcessionaria = select.options[select.selectedIndex].text;
+  const nome = document.getElementById('nome').value;
+  const sobrenome = document.getElementById('sobrenome').value;
+  const email = document.getElementById('email').value;
+  const telefone = parseInt(document.getElementById('telefone').value);
+  const quando = document.getElementById('quando').value;
+  const cidade = document.getElementById('cidade').value;
+  const estado = document.getElementById('estado').value;
+
+  const calcular = document.getElementById("calcular");
+  calcular.textContent = "Refazer";
+
+  if (isNaN(conta) || conta < 270 || isNaN(tarifa) || conta > 10000) {
+    alert("Informe um valor de conta acima de R$ 270 e selecione uma concessionária.");
+    return;
+  }
+
+  const kwh = conta / tarifa;
+  const kwp = (kwh / 0.78) / 5 / 30;
+  const potencia = kwp.toFixed(2);
+  const economia = (conta * 12).toFixed(2);
+  const investimento = (kwp * 2400).toFixed(2);
+
+  // Tabela cartão de crédito (1 a 24x) com juros progressivos a partir de 3.99%
+  let tabelaCartao = '<h4>Simulação no Cartão de Crédito (1x a 24x)</h4><div class="container-tabela" ><table><tr><th>Parcelas</th><th>Valor Parcela (R$)</th><th>Juros</th></tr>';
+  for (let i = 1; i <= 24; i++) {
+    const juros = 1 + ((3.99 + (i * 0.1)) / 100);
+    const valorParcela = ((investimento * juros) / i).toFixed(2);
+    tabelaCartao += `<tr><td>${i}x</td><td>R$ ${valorParcela}</td><td>R$ ${juros}</td></tr>`;
+  }
+  tabelaCartao += '</table></div>';
+
+  // Tabela financiamento (20 a 84x) com juros progressivos a partir de 1.45%
+  let tabelaFinanciamento = '<h4>Simulação por Financeira (20x a 84x)</h4><table><tr><th>Parcelas</th><th>Valor Parcela (R$)</th><th>Juros</th></tr>';
+  for (let i = 20; i <= 84; i++) {
+    const juros = 1 + ((1.45 + (i * 0.05)) / 100);
+    const valorParcela = ((investimento * juros) / i).toFixed(2);
+    tabelaFinanciamento += `<tr><td>${i}x</td><td>R$ ${valorParcela}</td><td>R$ ${juros}</td></tr>`;
+  }
+  tabelaFinanciamento += '</table>';
+
+  document.getElementById('printArea').innerHTML = `
+    <h3>Resultado da Simulação</h3>
+    <p><strong>Cliente:</strong> ${nome}  ${sobrenome}</p>
+     <p><strong>Telefone:</strong> ${telefone} </p>
+      <p><strong>E-mail:</strong> ${email} </p>
+      <p><strong>Cidade:</strong> ${cidade} </p>
+      <p><strong>Estado:</strong> ${estado} </p>
+      <p><strong>Concessionaria:</strong> ${resultconcessionaria} </p>
+      <p><strong>Pretende instalar o sistema em:</strong> ${quando} </p>
+    <p><strong>Potência estimada do sistema:</strong> ${potencia} kWp</p>
+    <p><strong>Consumo médio mensal:</strong> ${kwh.toFixed(0)} kWh</p>
+    <p><strong>Economia anual estimada:</strong> R$ ${economia}</p>
+    <p><strong>Investimento estimado:</strong> R$ ${investimento}</p>
+    ${tabelaCartao}
+    ${tabelaFinanciamento}
+    <canvas id="grafico" style="max-width: 100%;"></canvas>
+  `;
+
+  document.getElementById('botoesAcao').style.display = 'flex';
+  document.getElementById('resultado').style.display = 'block';
+  
+  gerarGrafico(kwh);
+});
+
+      function gerarGrafico(kwh) {
+        const ctx = document.getElementById('grafico').getContext('2d');
+        const fatorMensal = [1.1, 1.0, 0.95, 0.9, 0.85, 0.9, 1.0, 1.05, 1.1, 1.2, 1.15, 1.1];
+        const geracaoMensal = fatorMensal.map(f => (kwh * f).toFixed(0));
+    
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+              label: 'Geração (kWh)',
+              data: geracaoMensal,
+              backgroundColor: '#0a3d62'
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: true }
+            },
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+      }
+    </script> 
+     <!--Aria de impressão-->
+     <div class="results" id="resultado">
+      <div id="printArea"></div>
+    </div>
+        
+    <section class="depoimentos">
+      <h2 class="section-title">O que dizem nossos clientes</h2>
+      <div class="depoimento">
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1">
+        <h3>Ana Paula</h3>
+        <p>Ótimo atendimento e serviço de qualidade! Instalaram meu sistema solar com muita eficiência.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Cliente 2">
+        <h3>Lucas Martins</h3>
+        <p>Contratei para automação residencial e estou muito satisfeito. Recomendo com certeza!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente 3">
+        <h3>Renato Silva</h3>
+        <p>Fizeram toda parte elétrica da minha loja. Trabalho impecável e dentro do prazo.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 4">
+        <h3>Fernanda Costa</h3>
+        <p>Instalação de câmeras feita com cuidado e muito profissionalismo. Empresa de confiança.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Cliente 5">
+        <h3>Marcos Lima</h3>
+        <p>Equipe prestativa e atenciosa. Tudo foi feito com muita organização. Indico para todos.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente 6">
+        <h3>Juliana Rocha</h3>
+        <p>Os painéis solares reduziram minha conta em 80%. Instalação rápida e limpa.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente 7">
+        <h3>João Pedro</h3>
+        <p>Serviço de automação excelente. Minha casa ficou muito mais moderna!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Cliente 8">
+        <h3>Bianca Ferreira</h3>
+        <p>Trabalho de excelência. Preço justo e materiais de qualidade. Super recomendo!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Cliente 9">
+        <h3>Thiago Gomes</h3>
+        <p>Muito satisfeito com a instalação elétrica da minha residência. Profissionais competentes.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Cliente 10">
+        <h3>Patrícia Andrade</h3>
+        <p>Segurança eletrônica top! Agora me sinto mais tranquila com as câmeras instaladas.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+    </section>
+   
+
+    <section style="display: none;" id="contato">
+      <h2 class="section-title">Entre em contato</h2>
+      <input type="text" placeholder="Seu nome" />
+      <input type="email" placeholder="Seu e-mail" />
+      <textarea placeholder="Digite sua mensagem..."></textarea>
+      <button class="contato">Enviar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Es Elétrica RJ - Todos os direitos reservados</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/eseletricario"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/12HY5epetzr/"><i class="fab fa-facebook"></i></a>
+      <a href="https://g.page/r/Cco11IXaRjT0EAE/review"><i class="fa-store"></i></a>
+    </div>
+ 
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show-menu");
+    }
+    
+   </script>
+   <!-- Banner de Cookies LGPD -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #0a1f44; color: white; padding: 15px; font-size: 14px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div style="max-width: 80%;">
+    Utilizamos cookies para melhorar sua experiência em nosso site, personalizar anúncios e analisar o tráfego. Ao continuar navegando, você concorda com nossa <a href="/politica-de-privacidade" target="_blank" style="color: #00d4ff; text-decoration: underline;">Política de Privacidade</a>.
+  </div>
+  <button onclick="aceitarCookies()" style="margin-left: 10px; padding: 10px 20px; background-color: #00d4ff; color: #000; border: none; border-radius: 5px; cursor: pointer;">Aceitar</button>
+</div>
+
+<script>
+  function aceitarCookies() {
+    localStorage.setItem("cookieConsent", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem("cookieConsent") === "true") {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+  };
+</script>
+
+</body>
+</html>
