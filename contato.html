@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Es Elétrica RJ - Soluções Inteligentes</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style2.css" />
+ 
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="./img/logo.png" alt="Es Elétrica RJ"> </div>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <nav id="menu">
+      <a href="./index.html">Home</a>
+      <a href="./solar.html">Energia Solar</a>
+     <!-- <a href="#seguranca">Segurança Eletrônica</a>
+      <a href="#eletrica">Instalações Elétricas</a>
+      <a href="#automacao">Automação Residencial</a>
+      <a href="#simulador">Simulador Solar</a>-->
+      <a href="./contato.html">Contato</a>
+    </nav>
+  </header>
+
+   <main>
+    
+  <section id="solar" class="solar">
+   <div class="container
+  </div>
+     <div class="story">
+      <h2>Nossa História</h2>
+      <img src="./img/Eletrica2.jpg" alt="Equipe ES Elétrica RJ">
+      <p>A ES Elétrica RJ nasceu do sonho de um profissional com mais de <strong>20 anos de experiência</strong> nas áreas de instalações elétricas, segurança eletrônica, automação residencial e energia solar. Fundada oficialmente em <strong>julho de 2022</strong>, a empresa já carrega uma bagagem sólida construída ao longo de décadas de capacitação técnica e atendimento de excelência.</p>
+      <p>Antes mesmo de existir formalmente como empresa, a qualidade dos nossos serviços já era reconhecida por nossos clientes. A fundação da ES Elétrica RJ foi um passo natural na consolidação de um trabalho que sempre priorizou segurança, eficiência e soluções modernas.</p>
+
+      <img src="./img/Solar3.jpg" alt="Serviços em Energia Solar">
+      <p>Hoje, atuamos em todo o estado do Rio de Janeiro, com destaque para São Gonçalo e cidades vizinhas. Nossos serviços incluem desde projetos e instalações residenciais até grandes sistemas de energia solar e redes de segurança com alta tecnologia.</p>
+
+      <img src="./img/Solar2.jpg" alt="Clientes Felizes">
+      <p>Em todo esse tempo, <strong>nunca tivemos um cliente insatisfeito</strong>. Pelo contrário, nossa reputação é confirmada por avaliações positivas no Google, Facebook e presença verificada no Reclame Aqui. Trabalhamos com dedicação total para garantir que cada projeto entregue vá além das expectativas.</p>
+      <p>Se você busca uma empresa séria, experiente e comprometida com a excelência, a ES Elétrica RJ é a escolha certa.</p>
+    </div>
+  </div>
+    <section style="display: none;" id="contato">
+      <h2 class="section-title">Entre em contato</h2>
+      <input type="text" placeholder="Seu nome" />
+      <input type="email" placeholder="Seu e-mail" />
+      <textarea placeholder="Digite sua mensagem..."></textarea>
+      <button class="contato">Enviar</button>
+    </section>
+     <h2>Fale Conosco</h2>
+    <div class="info">
+      <p><strong>📍 Endereço:</strong> Alameda Belo Horizonte, nº 100, Conj. 28, Quadra 12, Sala 2, Rio do Ouro, São Gonçalo - RJ, CEP 24752-500</p>
+      <p><strong>📞 Telefones:</strong> (21) 99957-7208 / (21) 99841-5889</p>
+      <p><strong>📧 E-mail:</strong> eletroinformaticaltda@gmail.com</p>
+      <p><strong>🌐 Redes Sociais:</strong> @eseletricario (Instagram, Facebook, X)</p>
+      <p><strong>🆔 CNPJ:</strong> 47.002.069/0001-18 | Abertura: 02/07/2022</p>
+      <p><strong>Atividades:</strong> Promoção de vendas, Instalação elétrica, Segurança eletrônica, Comércio de material elétrico</p>
+    </div>
+   </section>
+  </main>
+  <footer>
+    <p>© 2025 Es Elétrica RJ - Todos os direitos reservados</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/eseletricario"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/12HY5epetzr/"><i class="fab fa-facebook"></i></a>
+      <a href="https://g.page/r/Cco11IXaRjT0EAE/review"><i class="fa-store"></i></a>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show-menu");
+    }
+   </script>
+   <!-- Banner de Cookies LGPD -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #0a1f44; color: white; padding: 15px; font-size: 14px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div style="max-width: 80%;">
+    Utilizamos cookies para melhorar sua experiência em nosso site, personalizar anúncios e analisar o tráfego. Ao continuar navegando, você concorda com nossa <a href="/politica-de-privacidade" target="_blank" style="color: #00d4ff; text-decoration: underline;">Política de Privacidade</a>.
+  </div>
+  <button onclick="aceitarCookies()" style="margin-left: 10px; padding: 10px 20px; background-color: #00d4ff; color: #000; border: none; border-radius: 5px; cursor: pointer;">Aceitar</button>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
