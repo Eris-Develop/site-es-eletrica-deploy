@@ -1,0 +1,536 @@
+:root {
+    --azul-escuro: #003366;
+    --azul-claro: #0073e6;
+    --branco: #ffffff;
+    --cinza: #f2f2f2;
+    --texto: #333;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    /*--background-color: var(--cinza);
+    background-image: url(./img/Eletrica.jpg) ;
+    background-repeat: no-repeat;
+    */
+    background-color: var(--cinza);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 30px;
+    padding-top: 0;
+  }
+  .logo img{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100pt;
+    height: 50pt;
+    padding-top: 0;
+    margin-bottom: 10pt;
+    text-align: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--azul-escuro);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+
+  nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .show-menu {
+    display: flex !important;
+  }
+
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  section {
+    margin-bottom: 50px;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  section img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+
+  .section-title {
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+
+  footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .socials a {
+    color: var(--branco);
+    margin: 0 10px;
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .depoimentos {
+   
+  }
+  .section-title{
+    text-align: center;
+  }
+
+  .depoimento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--branco);
+    padding: 30px;
+    /*border-left: 5px solid var(--azul-claro);*/
+  }
+  /*
+  .depoimento p {
+    font-style: italic;
+  }
+
+  .depoimento strong {
+    display: block;
+    margin-top: 10px;
+    color: var(--azul-escuro);
+  }
+*/
+  .review {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 51, 102, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    /*align-items: center;
+    text-align: center;
+    */
+  }
+
+  .review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #003366;
+  }
+
+  .review h3 {
+    margin: 0.5rem 0;
+    color: #003366;
+  }
+
+  .review p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stars {
+    color: #f9b851;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    
+  }
+
+  @media (min-width: 768px) {
+    nav {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      background: none;
+      width: auto;
+      padding: 0;
+      gap: 20px;
+    }
+    .logo img{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 140pt;
+    height: 70pt;
+    padding-top: 0;
+    }
+    nav a {
+      border: none;
+      padding: 10px;
+      background-color: var(--azul-escuro);
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #005bb5;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .review {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 51, 102, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+    
+  }
+  .simulacao{
+    background-color:var(--cinza); 
+    border-left: 2px solid var(--azul-escuro);
+    padding: 20px;
+    border-radius: 5px;
+  
+  }
+  #solarForm{
+    
+    
+     }
+  .form2 {
+  display: flex;
+  flex-direction: column;          
+  }
+  .formdados{
+    padding-top: 26px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .formnomes{
+    display: flex;
+    flex-direction: row;
+            
+  }
+  .formbutton{
+    text-align: center;
+  }
+  .form-group {
+    padding: 10px;
+    
+  }
+  .form-group input{
+    border: 1px var(--azul-claro) solid ;
+  }
+  .full-width{
+    padding: 10px;
+  }
+  .whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebc5a;
+}
+
+.whatsapp-button i {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+  #simulador input, #simulador select, #simulador button, #contato input, #contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  #simulador button, #contato button {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  #resultado {
+  display: none; 
+    margin-top: 20px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-left: 5px solid var(--azul-escuro);
+    border-radius: 8px;
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height:auto;
+    margin-bottom: 50px;
+  
+  }
+
+  .slides {
+    display: flex;
+    width: 100%;
+    height: auto;
+    animation: slide 18s;
+  }
+  .slides img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+   @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    background: #0a3d62;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+ 
+  h2, h3 {
+    color: #0a3d62;
+  }
+  .form-group, .full-width {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .button {
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .button:hover {
+    background-color: #05406c;
+  }
+  .share-print {
+    margin-top: 20px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .results {
+    margin-top: 30px;
+  }
+  canvas {
+    margin-top: 100px;
+    height: 40%;
+    width: 100%;
+
+  }
+  @media (max-width: 600px) {
+    .button {
+      width: 100%;
+    }
+  }
+  @media print {
+body * {
+  visibility: hidden;
+}
+#printArea, #printArea * {
+  visibility: visible;
+  height: auto;
+}
+#printArea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height:auto;
+    margin-bottom: 50px;
+  
+  }
+
+  .slides {
+    display: flex;
+    width: 100%;
+    height: auto;
+    animation: slide 18s;
+  }
+  .slides img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+   @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebc5a;
+}
+
+.whatsapp-button i {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+  #simulador input, #simulador select, #simulador button, #contato input, #contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  #simulador button, #contato button {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+  }
+  th {
+    background-color: #003366;
+    color: white;
+  }

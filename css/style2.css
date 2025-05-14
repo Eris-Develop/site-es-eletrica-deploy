@@ -1,0 +1,945 @@
+/*==============================
+  VARIÁVEIS GLOBAIS
+==============================*/
+:root {
+    --azul-escuro: #003366;
+    --azul-claro: #0073e6;
+    --branco: #ffffff;
+    --cinza: #f2f2f2;
+    --texto: #333;
+  }
+  
+  /*==============================
+    RESET GERAL E TIPOGRAFIA
+  ==============================*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--cinza);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+  
+  /*==============================
+    CABEÇALHO
+  ==============================*/
+  header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+   
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+  
+  .logo img {
+    width: 140pt;
+    height: 70pt;
+    margin-bottom: 10pt;
+    text-align: center;
+  }
+  
+  /*==============================
+    MENU DE NAVEGAÇÃO
+  ==============================*/
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--azul-escuro);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .show-menu {
+    display: flex !important;
+  }
+  
+  @media (min-width: 1024px) {
+    nav {
+      display: flex !important;
+      /*position: static;*/
+      position: absolute;
+      flex-direction: row;
+      background: none;
+      width: auto;
+      /*padding: 0;*/
+      padding-bottom: 0;
+      padding-left: ;
+      gap: 10px;
+    }
+  
+    nav a {
+      border: none;
+      padding: 5px;
+      background-color: var(--azul-escuro);
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+  
+    nav a:hover {
+      background-color: #005bb5;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 700px ){
+   .simulacao{
+    display: block;
+    flex-direction: row;
+    width: 100%;
+   }
+   .simulacao h2{
+    text-align: center;
+   }
+   .form2 .form-group {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+  }
+ 
+  .formdados, .formnomes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 26px;
+    padding-right: 10px;
+  }
+  .full-width{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  /*Avaliação*/
+ 
+    .depoimentos {
+      position:relative;
+      overflow: hidden;
+      height: 600px;
+      margin-bottom: 50px;
+    }
+    
+    .depoimento{
+      display: flex;
+      width: auto;
+      height: auto;
+      animation: slid 18s infinite;
+    }
+    
+    .review {
+      width: auto;
+      object-fit: cover;
+    }
+    
+    @keyframes slid {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    
+  
+  }
+  
+  /*==============================
+    CONTEÚDO PRINCIPAL
+  ==============================*/
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  section {
+    margin-bottom: 50px;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .section-title {
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  section img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /*==============================
+    RODAPÉ
+  ==============================*/
+  footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .socials a {
+    color: var(--branco);
+    margin: 0 10px;
+    font-size: 1.4rem;
+  }
+  
+  /*==============================
+    GRADE E DEPOIMENTOS
+  ==============================*/
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .depoimento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--branco);
+    padding: 30px;
+  }
+  
+  .review {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 51, 102, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--azul-escuro);
+  }
+  
+  .review h3 {
+    margin: 0.5rem 0;
+    color: var(--azul-escuro);
+  }
+  
+  .review p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stars {
+    color: #f9b851;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .review {
+      width: 25%;
+    }
+  }
+  
+  /*==============================
+    FORMULÁRIOS
+  ==============================*/
+  .form2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formdados, .formnomes {
+    display: flex;
+    flex-direction: row;
+    padding-top: 26px;
+    padding-right: 10px;
+  }
+  
+  .formbutton {
+    text-align: center;
+  }
+  
+  .form-group {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input,
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  
+  .full-width {
+    padding: 10px;
+  }
+  
+  .button, .contato {
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .button,.contato:hover {
+    background-color: #05406c;
+  }
+  #botoesAcao{
+    display: none;
+  }
+  
+  /*==============================
+    SIMULADOR E RESULTADOS
+  ==============================*/
+  .simulacao {
+   /* background-color: var(--cinza);*/
+   background-color: #f9b851;
+    border-left: 2px solid var(--azul-escuro);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #resultado {
+    display: none;
+    margin-top: 20px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-left: 5px solid var(--azul-escuro);
+    border-radius: 8px;
+  }
+
+  .results {
+    margin-top: 30px;
+  }
+  
+  /*==============================
+    TABELAS
+  ==============================*/
+  .container-tabela{
+   
+  }
+  table {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: var(--azul-escuro);
+    color: white;
+  }
+  
+  /*==============================
+    SLIDER
+  ==============================*/
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: auto;
+    animation: slide 18s infinite;
+  }
+  
+  .slides img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /*==============================
+    BOTÃO WHATSAPP
+  ==============================*/
+  .whatsapp-button {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 999;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #1ebc5a;
+  }
+  
+  .whatsapp-button i {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .whatsapp-button {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
+  
+  /*==============================
+    IMPRESSÃO
+  ==============================*/
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #printArea, #printArea * {
+      visibility: visible;
+    }
+    #printArea {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  /*==============================
+    Contato
+  ==============================*/
+ 
+/*==============================
+  VARIÁVEIS GLOBAIS
+==============================*/
+:root {
+    --azul-escuro: #003366;
+    --azul-claro: #0073e6;
+    --branco: #ffffff;
+    --cinza: #f2f2f2;
+    --texto: #333;
+  }
+  
+  /*==============================
+    RESET GERAL E TIPOGRAFIA
+  ==============================*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--cinza);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+  
+  /*==============================
+    CABEÇALHO
+  ==============================*/
+  header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+   
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+  
+  .logo img {
+    width: 140pt;
+    height: 70pt;
+    margin-bottom: 10pt;
+    text-align: center;
+  }
+  
+  /*==============================
+    MENU DE NAVEGAÇÃO
+  ==============================*/
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--azul-escuro);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .show-menu {
+    display: flex !important;
+  }
+  
+  @media (min-width: 1024px) {
+    nav {
+      display: flex !important;
+      /*position: static;*/
+      position: absolute;
+      flex-direction: row;
+      background: none;
+      width: auto;
+      /*padding: 0;*/
+      padding-bottom: 0;
+      padding-left: ;
+      gap: 10px;
+    }
+  
+    nav a {
+      border: none;
+      padding: 5px;
+      background-color: var(--azul-escuro);
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+  
+    nav a:hover {
+      background-color: #005bb5;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 700px ){
+   .simulacao{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   }
+   .simulacao h2{
+    text-align: center;
+   }
+   .form2 .form-group {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+  }
+ 
+  .formdados, .formnomes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 26px;
+    padding-right: 10px;
+  }
+  .full-width{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  }
+  
+  /*==============================
+    CONTEÚDO PRINCIPAL
+  ==============================*/
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  section {
+    margin-bottom: 50px;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .section-title {
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  section img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /*==============================
+    RODAPÉ
+  ==============================*/
+  footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .socials a {
+    color: var(--branco);
+    margin: 0 10px;
+    font-size: 1.4rem;
+  }
+  
+  /*==============================
+    GRADE E DEPOIMENTOS
+  ==============================*/
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .depoimento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--branco);
+    padding: 30px;
+  }
+  
+  .review {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 51, 102, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--azul-escuro);
+  }
+  
+  .review h3 {
+    margin: 0.5rem 0;
+    color: var(--azul-escuro);
+  }
+  
+  .review p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stars {
+    color: #f9b851;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns:  1fr;
+    }
+  
+    .review {
+      width: 25%;
+    }
+  }
+  
+  /*==============================
+    FORMULÁRIOS
+  ==============================*/
+  .form2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formdados, .formnomes {
+    display: flex;
+    flex-direction: row;
+    padding-top: 26px;
+    padding-right: 10px;
+  }
+  
+  .formbutton {
+    text-align: center;
+  }
+  
+  .form-group {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input,
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  
+  .full-width {
+    padding: 10px;
+  }
+  
+  .button, .contato {
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .button,.contato:hover {
+    background-color: #05406c;
+  }
+  #botoesAcao{
+    display: none;
+  }
+  
+  /*==============================
+    SIMULADOR E RESULTADOS
+  ==============================*/
+  .simulacao {
+   /* background-color: var(--cinza);*/
+   background-color: #f9b851;
+    border-left: 2px solid var(--azul-escuro);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #resultado {
+    display: none;
+    margin-top: 20px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-left: 5px solid var(--azul-escuro);
+    border-radius: 8px;
+  }
+
+  .results {
+    margin-top: 30px;
+  }
+  
+  /*==============================
+    TABELAS
+  ==============================*/
+  .container-tabela{
+   
+  }
+  table {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: var(--azul-escuro);
+    color: white;
+  }
+  
+  /*==============================
+    SLIDER
+  ==============================*/
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: auto;
+    animation: slide 18s infinite;
+  }
+  
+  .slides img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /*==============================
+    BOTÃO WHATSAPP
+  ==============================*/
+  .whatsapp-button {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 999;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #1ebc5a;
+  }
+  
+  .whatsapp-button i {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .whatsapp-button {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
+  
+  /*==============================
+    IMPRESSÃO
+  ==============================*/
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #printArea, #printArea * {
+      visibility: visible;
+    }
+    #printArea {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  /*==============================
+    Contato
+  ==============================*/
+   .story {
+      margin-top: 40px;
+    }
+    .story img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+   /*==============================
+    Solar
+  ==============================*/
+
+.solar p {
+  text-indent: 2em;
+  
+}
+.solar3{
+  color: var (--azul-claro);
+}
+.duvidas ul{
+list-style: none;
+}
+.investir ul{
+  list-style:none;
+}
